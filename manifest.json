@@ -1,0 +1,27 @@
+{
+  "name": "ibamboo",
+  "short_name": "ibamboo",
+  "description": "ibamboo 做的幾個網頁小工具。",
+  "lang": "zh-Hant",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "id": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#F6FBF4",
+  "theme_color": "#DFF6DF",
+  "categories": ["utilities", "productivity"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "推倒胡", "url": "https://ibamboo-mahjong.boll090292.workers.dev", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "英文任務", "url": "https://english-quest.boll090292.workers.dev", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "退休金帳本", "url": "https://sparkling-pine-a903.boll090292.workers.dev/", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "夜燈", "url": "https://sleep.boll090292.workers.dev", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  // ibamboo 首頁：純靜態網站，檔案全部放在 repo 最外層即可
+  "name": "ibamboo",
+  "compatibility_date": "2026-08-01",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "single-page-application"
+  }
+}
