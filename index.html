@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ibamboo｜推倒胡・英文任務・退休金帳本・夜燈</title>
-<meta name="description" content="ibamboo 做的幾個網頁小工具：推倒胡麻將、英文任務、退休金帳本、夜燈。">
+<title>ibamboo｜企業設備管理系統・推倒胡・英文任務・退休金帳本・夜燈</title>
+<meta name="description" content="ibamboo 用 AI 做的網頁工具與系統：企業設備管理系統（掃碼叫修）、推倒胡麻將、英文任務、退休金帳本、夜燈。">
 <meta name="author" content="ibamboo">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://ibamboo.boll090292.workers.dev/">
@@ -17,14 +17,14 @@
 <meta property="og:site_name" content="ibamboo">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:url" content="https://ibamboo.boll090292.workers.dev/">
-<meta property="og:title" content="ibamboo｜推倒胡・英文任務・退休金帳本・夜燈">
-<meta property="og:description" content="ibamboo 做的幾個網頁小工具。">
+<meta property="og:title" content="ibamboo｜企業設備管理系統・推倒胡・英文任務・退休金帳本・夜燈">
+<meta property="og:description" content="ibamboo 用 AI 做的網頁工具與系統。">
 <meta property="og:image" content="https://ibamboo.boll090292.workers.dev/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ibamboo｜推倒胡・英文任務・退休金帳本・夜燈">
-<meta name="twitter:description" content="ibamboo 做的幾個網頁小工具。">
+<meta name="twitter:title" content="ibamboo｜企業設備管理系統・推倒胡・英文任務・退休金帳本・夜燈">
+<meta name="twitter:description" content="ibamboo 用 AI 做的網頁工具與系統。">
 <meta name="twitter:image" content="https://ibamboo.boll090292.workers.dev/og.png">
 
 <link rel="icon" href="icon-192.png">
@@ -86,7 +86,7 @@ h1,h2,p{margin:0}
   100%{transform:translate3d(-2vw,112vh,0) rotate(360deg)}
 }
 
-.hero,.g,.foot{position:relative;z-index:1}
+.hero,.sec,.foot{position:relative;z-index:1}
 .hero{background:var(--hero);text-align:center;padding:56px 20px 40px}
 .hero h1,.hero p,.install{animation:rise .7s cubic-bezier(.2,.9,.3,1.2) both}
 .hero p{animation-delay:.1s}
@@ -104,11 +104,18 @@ h1,h2,p{margin:0}
 .hero h1{font-size:clamp(34px,8vw,46px);font-weight:900;color:var(--green-d);letter-spacing:.02em}
 .hero p{margin-top:10px;color:var(--soft);font-size:clamp(15px,3.6vw,17px)}
 
-.g{
-  max-width:960px;margin:0 auto;
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;padding:28px 20px 8px;
+.sec{max-width:960px;margin:0 auto;padding:0 20px}
+.sechd{
+  display:flex;align-items:center;gap:14px;margin:26px 0 0;
+  font-size:12.5px;font-weight:700;letter-spacing:.16em;color:var(--faint);
 }
+.sechd::after{content:"";flex:1;height:1px;background:var(--line)}
+.g{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+  gap:20px;padding:16px 0 8px;
+}
+.g--one{grid-template-columns:1fr}
+.c--pro{background:linear-gradient(140deg,var(--hero) 0%,var(--card) 78%);border-color:rgba(88,166,107,.45)}
 /* 卡片浮動 */
 .float{animation:rise .7s cubic-bezier(.2,.9,.3,1.2) both, drift 6s ease-in-out infinite}
 .float:nth-child(1){animation-delay:.05s,.7s}
@@ -130,7 +137,10 @@ h1,h2,p{margin:0}
 .c p{transition:color .25s}
 .c h2{font-size:22px;font-weight:900;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .c h2 .e{font-size:26px;line-height:1}
-.lock{font-size:11px;font-weight:700;padding:2px 10px;border-radius:99px;background:var(--bg);color:var(--faint);border:1px solid var(--line)}
+.lock,.mon,.pay{font-size:11px;font-weight:700;padding:2px 10px;border-radius:99px;background:var(--bg);color:var(--faint);border:1px solid var(--line);white-space:nowrap}
+.mon{color:var(--green-d);border-color:rgba(88,166,107,.35)}
+.pay{font-size:11px;font-weight:700;padding:2px 10px;border-radius:99px;white-space:nowrap;
+  background:rgba(224,143,38,.12);color:#C07A1E;border:1px solid rgba(224,143,38,.35)}
 .c p{margin-top:8px;color:var(--soft);font-size:15px}
 .b{
   position:relative;overflow:hidden;
@@ -173,7 +183,7 @@ h1,h2,p{margin:0}
 <header class="hero">
   <h1>
     <img class="mark" src="data:image/png;base64,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" width="144" height="144" alt="">ibamboo</h1>
-  <p>下班之後做的幾個小工具。</p>
+  <p>作品集</p>
   <button class="install" id="install" type="button">📲 安裝到手機</button>
   <p class="hint" id="hint">在 Safari 點下方的「分享」<br>再選「加入主畫面」就裝好了。</p>
 </header>
@@ -181,37 +191,61 @@ h1,h2,p{margin:0}
   <path d="M0 0h1440v18c-180 30-360 42-540 30S180 12 0 34z" fill="currentColor"/>
 </svg>
 
-<main class="g">
+<main>
 
+  <section class="sec">
+    <p class="sechd">服務</p>
+    <div class="g g--one">
+  <div class="float"><a class="c c--pro" href="https://majestic-rugelach-adc8a9.netlify.app/" rel="noopener">
+      <h2><svg class="ico" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="4" y="4" width="13" height="13" rx="3" fill="none" stroke="#3C4A41" stroke-width="2.6"/>
+        <rect x="8.5" y="8.5" width="4" height="4" rx="1" fill="#3C4A41"/>
+        <rect x="23" y="4" width="13" height="13" rx="3" fill="none" stroke="#3C4A41" stroke-width="2.6"/>
+        <rect x="27.5" y="8.5" width="4" height="4" rx="1" fill="#3C4A41"/>
+        <rect x="4" y="23" width="13" height="13" rx="3" fill="none" stroke="#3C4A41" stroke-width="2.6"/>
+        <rect x="8.5" y="27.5" width="4" height="4" rx="1" fill="#3C4A41"/>
+        <rect x="20" y="20" width="3.4" height="3.4" rx="1" fill="#B9C4BC"/>
+        <rect x="20" y="27" width="3.4" height="3.4" rx="1" fill="#B9C4BC"/>
+        <circle cx="30" cy="30" r="8.5" fill="#4CAF63"/>
+        <path d="M32.6 26.2a3.6 3.6 0 0 0-4.6 4.6l-2.4 2.4a1.2 1.2 0 0 0 1.7 1.7l2.4-2.4a3.6 3.6 0 0 0 4.6-4.6l-1.8 1.8-1.6-1.6z" fill="#fff"/>
+      </svg>企業設備管理系統 <span class="mon">2026.08</span> <span class="pay">需收費</span></h2>
+      <p>掃設備上的 QR 碼就能叫修，工單自動建立，保養紀錄不漏單。</p>
+      <span class="b">看介紹</span>
+    </a></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <p class="sechd">下班做的小工具</p>
+    <div class="g">
   <div class="float"><a class="c" href="https://ibamboo-mahjong.boll090292.workers.dev" rel="noopener">
-    <h2><svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 15 20)"><rect x="4" y="7" width="17" height="25" rx="4.5" fill="#FBF7EA" stroke="#DCD3BC" stroke-width="1.6"/><text x="12.5" y="24" text-anchor="middle" font-size="12.5" font-weight="900" fill="#3D8B5C" font-family="inherit">發</text></g><g transform="rotate(6 26 19)"><rect x="18" y="6" width="18" height="26" rx="4.5" fill="#FFFDF6" stroke="#DCD3BC" stroke-width="1.6"/><text x="27" y="23.5" text-anchor="middle" font-size="13" font-weight="900" fill="#D6473E" font-family="inherit">中</text></g></svg>推倒胡</h2>
-    <p>台灣十六張麻將，開房間跟家人打，或跟 AI 對手打幾圈。</p>
-    <span class="b">開始玩</span>
-  </a></div>
-
+      <h2><svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 15 20)"><rect x="4" y="7" width="17" height="25" rx="4.5" fill="#FBF7EA" stroke="#DCD3BC" stroke-width="1.6"/><text x="12.5" y="24" text-anchor="middle" font-size="12.5" font-weight="900" fill="#3D8B5C" font-family="inherit">發</text></g><g transform="rotate(6 26 19)"><rect x="18" y="6" width="18" height="26" rx="4.5" fill="#FFFDF6" stroke="#DCD3BC" stroke-width="1.6"/><text x="27" y="23.5" text-anchor="middle" font-size="13" font-weight="900" fill="#D6473E" font-family="inherit">中</text></g></svg>推倒胡 <span class="mon">2026.07</span></h2>
+      <p>台灣十六張麻將，開房間跟家人打，或跟 AI 對手打幾圈。</p>
+      <span class="b">開始玩</span>
+    </a></div>
   <div class="float"><a class="c" href="https://english-quest.boll090292.workers.dev" rel="noopener">
-    <h2><svg class="ico" viewBox="0 0 40 40" aria-hidden="true">
-      <path d="M4 28c5-2.5 10-2.5 16 1 6-3.5 11-3.5 16-1v4c-5-2.5-10-2.5-16 1-6-3.5-11-3.5-16-1z" fill="#3E7FB8"/>
-      <path d="M5 12c5-2.5 10-2 14 1.4v15.2c-4-3.4-9-3.9-14-1.4z" fill="#F4FAFE" stroke="#8FC3E6" stroke-width="1.3" stroke-linejoin="round"/>
-      <path d="M35 12c-5-2.5-10-2-14 1.4v15.2c4-3.4 9-3.9 14-1.4z" fill="#FFFFFF" stroke="#8FC3E6" stroke-width="1.3" stroke-linejoin="round"/>
-      <path d="M8.5 17.5c3-1 6-1 8 .4M8.5 21.5c3-1 6-1 8 .4M23.5 17.9c2-1.4 5-1.4 8-.4M23.5 21.9c2-1.4 5-1.4 8-.4" stroke="#9CCBE9" stroke-width="1.3" stroke-linecap="round" fill="none"/>
-      <path d="M30 3.5l1.5 3.2 3.5.5-2.5 2.4.6 3.4L30 11.4l-3.1 1.6.6-3.4L25 7.2l3.5-.5z" fill="#FFC155" stroke="#E8A62F" stroke-width="1"/>
-    </svg>英文任務</h2>
-    <p>闖關任務、單字小蜜蜂，一邊玩遊戲一邊背單字。</p>
-    <span class="b">開始學</span>
-  </a></div>
-
+      <h2><svg class="ico" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M4 28c5-2.5 10-2.5 16 1 6-3.5 11-3.5 16-1v4c-5-2.5-10-2.5-16 1-6-3.5-11-3.5-16-1z" fill="#3E7FB8"/>
+        <path d="M5 12c5-2.5 10-2 14 1.4v15.2c-4-3.4-9-3.9-14-1.4z" fill="#F4FAFE" stroke="#8FC3E6" stroke-width="1.3" stroke-linejoin="round"/>
+        <path d="M35 12c-5-2.5-10-2-14 1.4v15.2c4-3.4 9-3.9 14-1.4z" fill="#FFFFFF" stroke="#8FC3E6" stroke-width="1.3" stroke-linejoin="round"/>
+        <path d="M8.5 17.5c3-1 6-1 8 .4M8.5 21.5c3-1 6-1 8 .4M23.5 17.9c2-1.4 5-1.4 8-.4M23.5 21.9c2-1.4 5-1.4 8-.4" stroke="#9CCBE9" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+        <path d="M30 3.5l1.5 3.2 3.5.5-2.5 2.4.6 3.4L30 11.4l-3.1 1.6.6-3.4L25 7.2l3.5-.5z" fill="#FFC155" stroke="#E8A62F" stroke-width="1"/>
+      </svg>英文任務 <span class="mon">2026.07</span></h2>
+      <p>闖關任務、單字小蜜蜂，一邊玩遊戲一邊背單字。</p>
+      <span class="b">開始學</span>
+    </a></div>
   <div class="float"><a class="c" href="https://sparkling-pine-a903.boll090292.workers.dev/" rel="noopener">
-    <h2><svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 18h4l2.6-4 2 2.6z" fill="#F0A93E"/><rect x="11" y="27" width="4.5" height="6" rx="2.2" fill="#E89B2E"/><rect x="24" y="27" width="4.5" height="6" rx="2.2" fill="#E89B2E"/><ellipse cx="20" cy="22" rx="13" ry="10" fill="#FFC155"/><ellipse cx="31" cy="23" rx="4.4" ry="3.8" fill="#F0A93E"/><circle cx="32.6" cy="21.8" r="1.1" fill="#8A5A12"/><circle cx="29.6" cy="21.8" r="1.1" fill="#8A5A12"/><circle cx="25" cy="19.6" r="1.5" fill="#4A3210"/><rect x="15" y="14.8" width="9" height="2.2" rx="1.1" fill="#E08F26"/><circle cx="21" cy="8.6" r="4.4" fill="#FFE08A"/><text x="21" y="11.4" text-anchor="middle" font-size="6" font-weight="900" fill="#B8801E" font-family="inherit">$</text></svg>退休金帳本 <span class="lock">需密碼</span></h2>
-    <p>勞保加勞退，算算看退休後每個月能領多少。</p>
-    <span class="b">立即試算</span>
-  </a></div>
-
+      <h2><svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 18h4l2.6-4 2 2.6z" fill="#F0A93E"/><rect x="11" y="27" width="4.5" height="6" rx="2.2" fill="#E89B2E"/><rect x="24" y="27" width="4.5" height="6" rx="2.2" fill="#E89B2E"/><ellipse cx="20" cy="22" rx="13" ry="10" fill="#FFC155"/><ellipse cx="31" cy="23" rx="4.4" ry="3.8" fill="#F0A93E"/><circle cx="32.6" cy="21.8" r="1.1" fill="#8A5A12"/><circle cx="29.6" cy="21.8" r="1.1" fill="#8A5A12"/><circle cx="25" cy="19.6" r="1.5" fill="#4A3210"/><rect x="15" y="14.8" width="9" height="2.2" rx="1.1" fill="#E08F26"/><circle cx="21" cy="8.6" r="4.4" fill="#FFE08A"/><text x="21" y="11.4" text-anchor="middle" font-size="6" font-weight="900" fill="#B8801E" font-family="inherit">$</text></svg>退休金帳本 <span class="mon">2026.07</span> <span class="lock">需密碼</span></h2>
+      <p>勞保加勞退，算算看退休後每個月能領多少。</p>
+      <span class="b">立即試算</span>
+    </a></div>
   <div class="float"><a class="c" href="https://sleep.boll090292.workers.dev" rel="noopener">
-    <h2><svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="#8E7FD1" opacity=".14"/><path d="M24 7a14 14 0 1 0 8 24.5A15.8 15.8 0 0 1 24 7z" fill="#F3D57A"/><circle cx="19" cy="20.6" r="1.3" fill="#B99A2E"/><circle cx="25" cy="19.4" r="1.3" fill="#B99A2E"/><path d="M19.8 23.6q2.3 1.9 4.6-.4" stroke="#B99A2E" stroke-width="1.3" fill="none" stroke-linecap="round"/><path d="M31.5 8.5l1.1 2.7 2.7 1.1-2.7 1.1-1.1 2.7-1.1-2.7-2.7-1.1 2.7-1.1z" fill="#C8B6F2"/><path d="M9 25l.8 1.9L11.7 28l-1.9.8L9 30.7l-.8-1.9L6.3 28l1.9-.8z" fill="#C8B6F2" opacity=".8"/></svg>夜燈 <span class="lock">需密碼</span></h2>
-    <p>環境音、睡前故事，放著陪你睡著。</p>
-    <span class="b">體驗</span>
-  </a></div>
+      <h2><svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="#8E7FD1" opacity=".14"/><path d="M24 7a14 14 0 1 0 8 24.5A15.8 15.8 0 0 1 24 7z" fill="#F3D57A"/><circle cx="19" cy="20.6" r="1.3" fill="#B99A2E"/><circle cx="25" cy="19.4" r="1.3" fill="#B99A2E"/><path d="M19.8 23.6q2.3 1.9 4.6-.4" stroke="#B99A2E" stroke-width="1.3" fill="none" stroke-linecap="round"/><path d="M31.5 8.5l1.1 2.7 2.7 1.1-2.7 1.1-1.1 2.7-1.1-2.7-2.7-1.1 2.7-1.1z" fill="#C8B6F2"/><path d="M9 25l.8 1.9L11.7 28l-1.9.8L9 30.7l-.8-1.9L6.3 28l1.9-.8z" fill="#C8B6F2" opacity=".8"/></svg>夜燈 <span class="mon">2026.08</span> <span class="lock">需密碼</span></h2>
+      <p>環境音、睡前故事，放著陪你睡著。</p>
+      <span class="b">體驗</span>
+    </a></div>
+    </div>
+  </section>
 
 </main>
 
