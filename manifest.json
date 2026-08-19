@@ -89,6 +89,16 @@
           "sizes": "192x192"
         }
       ]
+    },
+    {
+      "name": "今日一卦",
+      "url": "https://daily-gua.boll090292.workers.dev/",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
