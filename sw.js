@@ -1,5 +1,5 @@
 /* ibamboo 首頁 service worker：離線也能開，改版自動更新 */
-const CACHE = "ibamboo-home-v2";
+const CACHE = "ibamboo-home-v3";
 const ASSETS = [
   "./",
   "./index.html",

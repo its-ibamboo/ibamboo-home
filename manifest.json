@@ -81,16 +81,6 @@
       ]
     },
     {
-      "name": "企業設備管理系統",
-      "url": "https://majestic-rugelach-adc8a9.netlify.app/",
-      "icons": [
-        {
-          "src": "icon-192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
       "name": "今日一卦",
       "url": "https://daily-gua.boll090292.workers.dev/",
       "icons": [
